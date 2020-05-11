@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="/mystyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>mensajes</h1>
+    <div id="contenedor">
+      <div id='mensajes'>
+        <ul id="lista"></ul>
+      </div>
+      <input type="text" id="texto"/>
+      <button id="boton">Send</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/front.js"></script>
+  </body>
+</html>

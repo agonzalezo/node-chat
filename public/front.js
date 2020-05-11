@@ -1,0 +1,27 @@
+var socket = io();
+let boton = document.getElementById("boton");
+let texto = document.getElementById('texto');
+let mensajes = document.getElementById('mensajes');
+let newtext;
+//#endregion
+
+boton.addEventListener('click',enviar)
+
+function enviar(evento){
+    console.log("clickeado");
+    newtext = document.createTextNode('Me: '+texto.value)
+    let newli = document.createElement('li');
+    newli.setAttribute('class','mymessage');
+    newli.appendChild(newtext);
+    mensajes.appendChild(newli);
+    socket.emit('frontmessage', texto.value)
+}
+
+socket.on('backendmessage',(data)=>{
+    console.log(`other say {${data}}`)
+    newtext = document.createTextNode(`Other : ${data.data}`)
+    let newli = document.createElement('li');
+    newli.setAttribute('class','othermessage');
+    newli.appendChild(newtext);
+    mensajes.appendChild(newli);
+})
