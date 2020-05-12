@@ -2,16 +2,22 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
-    <link rel="stylesheet" href="/mystyle.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-oOs/gFavzADqv3i5nCM+9CzXe3e5vXLXZ5LZ7PplpsWpTCufB7kqkTlC9FtZ5nJo" crossorigin="anonymous">
+    <link rel="stylesheet" href="/mystyle.css" /> 
   </head>
   <body>
     <h1>mensajes</h1>
+    <p class="contador">Total users:</p> <p class="contador" id="cantidad"></p>
     <div id="contenedor">
       <div id='mensajes'>
         <ul id="lista"></ul>
       </div>
-      <input type="text" id="texto"/>
+      <!-- <input type="text" id="texto"/> -->
+      <div class="form-group">
+        <!-- <label class="col-form-label" for="inputDefault">Default input</label> -->
+        <input id="texto" type="text" class="form-control" placeholder="Default input" id="inputDefault">
+      </div>
       <button id="boton">Send</button>
     </div>
     <script src="/socket.io/socket.io.js"></script>

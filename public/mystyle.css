@@ -20,7 +20,10 @@ div{
     padding: 2%;
     width: 50%;
 }
-
+.contador{
+    display: inline;
+    color: darkblue;
+}
 
 
 
