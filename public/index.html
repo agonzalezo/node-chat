@@ -15,14 +15,9 @@
     <link rel="stylesheet" href="/mystyle.css" />
   </head>
   <body>
-    <h1>Chat Node-Sockets</h1>
     <div id="contenedor" class="jumbotron">
-      <div>
-        <p class="contador">Total users:</p>
-        <p class="contador" id="cantidad"></p>
-      </div>
       <div class="card bg-light mb-3">
-        <div class="card-header">Chat Grupal</div>
+        <div class="card-header">NodeJs Sockets.io</div>
         <div class="card-body" id="mensajes">
           <!-- mensajes -->
         </div>
@@ -34,7 +29,11 @@
           class="form-control"
           placeholder="Ingresa un mensaje"
         />
-        <button type="button" class="btn btn-info" id="boton">Enviar</button>
+      </div>
+      <button type="button" class="btn btn-info" id="boton">Enviar</button>
+      <div class="contador">
+        <p>Total users:</p>
+        <p id="cantidad"></p>
       </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>

@@ -37,3 +37,10 @@ socket.on("alluser", (data) => {
 document.onkeypress= (e)=>{
  console.log(e.key); 
 }
+
+texto.onkeypress=(key)=>{
+  if (key.key == 'Enter') {
+    console.log('undio enter');
+    boton.click();
+  }
+}
