@@ -12,7 +12,7 @@ boton.addEventListener("click", enviar);
 function enviar(evento) {
   console.log("clickeado");
   newtext = document.createTextNode("Me: " + texto.value);
-  let newli = document.createElement("li");
+  let newli = document.createElement("p");
   newli.setAttribute("class", "mymessage");
   newli.appendChild(newtext);
   mensajes.appendChild(newli);
@@ -23,7 +23,7 @@ function enviar(evento) {
 socket.on("backendmessage", (data) => {
   console.log(`other say {${data}}`);
   newtext = document.createTextNode(`Other : ${data.data}`);
-  let newli = document.createElement("li");
+  let newli = document.createElement("p");
   newli.setAttribute("class", "othermessage");
   newli.appendChild(newtext);
   mensajes.appendChild(newli);
@@ -33,3 +33,7 @@ socket.on("alluser", (data) => {
     console.log(`Cantidad de usuarios conectados ${data}`)
   cantidad.innerText=data;
 });
+
+document.onkeypress= (e)=>{
+ console.log(e.key); 
+}

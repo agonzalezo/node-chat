@@ -1,11 +1,12 @@
 body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
-}
-div{
-    border: 1px solid black;
-    margin: auto;
-    padding: 0.5%;
+    margin-top: 2%;
+    padding: 1%;
+        background-image: url("dribble_big_.gif"); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
 }
 .mymessage{
     text-align: right;
@@ -19,19 +20,13 @@ div{
     margin: auto;
     padding: 2%;
     width: 50%;
+    background-color: white;
 }
 .contador{
     display: inline;
     color: darkblue;
 }
-
-
-
-/* * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font: 13px Helvetica, Arial; }
-.form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-.form input { border: 0; padding: 10px; width: 90%; margin-right: 0.5%; }
-.form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-#messages { list-style-type: none; margin: 0; padding: 0; }
-#messages li { padding: 5px 10px; }
-#messages li:nth-child(odd) { background: #eee; } */
+.card-body{
+    height:16rem;
+    overflow-y: scroll;
+}
