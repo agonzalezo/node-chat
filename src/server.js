@@ -6,7 +6,6 @@ const express = require("express"),
 //#Config
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
-let total_users = 0;
 
 //#Middleware
 app.use(morgan("dev"));

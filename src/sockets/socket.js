@@ -24,6 +24,7 @@ const connection = (server) => {
     });
   });
 };
+
 module.exports = {
   connection,
 };
