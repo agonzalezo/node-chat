@@ -2,8 +2,10 @@ const
     express = require("express"),
     router = express.Router()
 ;
-
+//#endregion
 router.get('/', (req, res)=>{
-res.render('chat');
+res.render('chat', {});
 })
-module.exports=router; 
+
+//#endregion
+module.exports=router;
