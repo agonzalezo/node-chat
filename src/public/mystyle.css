@@ -1,0 +1,39 @@
+.mymessage{
+    text-align: right;
+    color: rgb(3, 148, 148);
+}
+.othermessage{
+    text-align: left;
+    color: coral;
+}
+#contenedor{
+    margin: auto;
+    padding: 2%;
+    width: 50%;
+    background-color: white;
+    text-align: center;
+}
+#boton{
+    text-align: center;
+}
+.contador{
+    text-align: right;
+
+}
+.contador p{
+    color: darkblue;
+    display: inline-block;
+}
+.card-body{
+    height:16rem;
+    overflow-y: scroll;
+}
+body{
+        font-family: 'Roboto', sans-serif;
+    margin-top: 2%;
+    padding: 1%;
+        background-image: url("dribble_big_.gif"); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+}

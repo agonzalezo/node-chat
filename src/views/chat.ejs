@@ -1,0 +1,23 @@
+<%- include ('partials/_head')%>
+<div id="contenedor" class="jumbotron">
+  <div class="card bg-light mb-3">
+    <div class="card-header">NodeJs Sockets.io</div>
+    <div class="card-body" id="mensajes">
+      <!-- mensajes -->
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      id="texto"
+      type="text"
+      class="form-control"
+      placeholder="Ingresa un mensaje"
+    />
+  </div>
+  <button type="button" class="btn btn-info" id="boton">Enviar</button>
+  <div class="contador">
+    <p>Total users:</p>
+    <p id="cantidad"></p>
+  </div>
+</div>
+<%- include ('partials/_footer')%>
