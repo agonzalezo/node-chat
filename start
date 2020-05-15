@@ -1,4 +1,4 @@
 #!/bin/bash
 date > nohup.out
-Echo "Server starting" > nohup.out
+echo "Server starting" > nohup.out
 nohup node src/server.js &
