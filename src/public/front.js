@@ -31,7 +31,7 @@ socket.on("backendmessage", (data) => {
 
 socket.on("alluser", (data) => {
     console.log(`Cantidad de usuarios conectados ${data}`)
-  cantidad.innerText=data;
+  cantidad.innerText=`Total Users ${data}`;
 });
 
 document.onkeypress= (e)=>{
