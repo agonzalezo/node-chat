@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Server stoping `date`" > nohup.out
+kill $(pgrep node)
+echo "Stoped."
