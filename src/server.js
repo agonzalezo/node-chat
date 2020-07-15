@@ -8,7 +8,7 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
 //#Middleware
-app.use(morgan("dev"));
+app.use(morgan("common"));
 app.use(express.static(__dirname + "/public"));
 app.use(routes);
 
