@@ -5,12 +5,11 @@ let mensajes = document.getElementById("mensajes");
 let cantidad = document.getElementById("cantidad");
 let newtext;
 let total_users;
-//#endregion
 
+//#endregion
 boton.addEventListener("click", enviar);
 
 function enviar(evento) {
-  console.log("clickeado");
   newtext = document.createTextNode("Me: " + texto.value);
   let newli = document.createElement("p");
   newli.setAttribute("class", "mymessage");
@@ -21,7 +20,7 @@ function enviar(evento) {
 }
 
 socket.on("backendmessage", (data) => {
-  console.log(`other say {${data}}`);
+  // console.log(`other say {${data}}`);
   newtext = document.createTextNode(`Other : ${data.data}`);
   let newli = document.createElement("p");
   newli.setAttribute("class", "othermessage");
