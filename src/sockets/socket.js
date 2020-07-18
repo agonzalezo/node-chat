@@ -15,16 +15,17 @@ const connection = (server) => {
     });
     //#endregion
 
-    socket.on("frontmessage", (data) => {
-      console.log(`Client ${socket.id} say {${data}}`);
-      socket.broadcast.emit("backendmessage", { id: socket.id, data: data });
+    socket.on("frontmessage", (data, nickname) => {
+      console.log(`Client ${socket.id}:${nickname} say {${data}}`);
+      socket.broadcast.emit("backendmessage", { id: socket.id, data: data, nickname:nickname });
     });
+    
   });
 };
 //#endregion
 
 total_users.add=(lio,lsocket)=>{
-  console.log("a user connected with ID: " + lsocket.id);
+  console.log("ID: " + lsocket.id+" connected.");
   count_users = count_users + 1;
   lio.sockets.emit("alluser", count_users);
 }
