@@ -30,6 +30,7 @@ function enviar(evento) {
   newli.appendChild(newtext);
   mensajes.appendChild(newli);
   socket.emit("frontmessage", texto.value, mynick);
+  mensajes.scrollTop=500;
   texto.value=null;
 }
 
@@ -40,6 +41,7 @@ socket.on("backendmessage", (data) => {
   newli.setAttribute("class", "othermessage");
   newli.appendChild(newtext);
   mensajes.appendChild(newli);
+  mensajes.scrollTop=500;
 });
 
 socket.on("alluser", (data) => {
