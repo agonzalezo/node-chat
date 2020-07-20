@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "Server stoping `date`" > nohup.out
-kill $(pgrep node)
+#kill $(pgrep node)
+pm2 stop ecosystem.config.js --env production
 echo "Stoped."

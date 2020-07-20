@@ -1,4 +1,5 @@
 #!/bin/bash
 date > nohup.out
 echo "Server starting" > nohup.out
-nohup node src/server.js &
+#nohup node src/server.js &
+pm2 start ecosystem.config.js --env production
